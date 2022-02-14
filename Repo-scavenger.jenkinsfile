@@ -22,7 +22,7 @@ parameters {
 def cleanArtifactory (CREDENTIALS, REPO_NAME, DELETE_TIMESTAMP) {
     withEnv(["""CREDENTIALS=$CREDENTIALS""","""REPO_NAME=$REPO_NAME""","""DELETE_TIMESTAMP=$DELETE_TIMESTAMP"""]) {
         sh(script: '''
-            echo $CREDENTIALS $REPO_NAME $DELETE_TIMESTAMP
+            echo $REPO_NAME $DELETE_TIMESTAMP
         
             IFS=$'\n'
 
