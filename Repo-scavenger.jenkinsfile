@@ -12,7 +12,7 @@ parameters {
         stage('Run shell-script'){
             steps {
                 script{
-                    currentBuild.displayName = "${params.REPO_NAME} старше ${params.DELETE_TIMESTAMP}"
+                    currentBuild.displayName = "${params.REPO_NAME} older ${params.DELETE_TIMESTAMP}"
                 }
                 cleanArtifactory ("username:password",REPO_NAME,DELETE_TIMESTAMP)
             }
